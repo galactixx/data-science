@@ -1,0 +1,12 @@
+In machine learning, bias and variance are two fundamental concepts that describe the types of errors a model can have.
+
+Bias is the difference between the expected or average predictions of a model and the actual value.
+It’s a systematic error that occurs due to wrong assumptions in the machine learning process.
+A high-bias model is too simplistic and underfits the data, meaning it does not capture all the complexities in the data and therefore performs poorly.
+For example, a linear regression model may have a high bias if the data has a non-linear relationship.
+
+On the other hand, variance refers to how much the model’s prediction varies for different training sets. 
+It’s the amount that the estimate of the target function will change given different training data.
+A high-variance model is too complex and overfits the data, meaning it captures too much noise along with the underlying pattern and therefore performs poorly on unseen data.
+
+The key is to find a good balance between bias and variance, known as the bias-variance tradeoff, to create a model that generalizes well to new, unseen data.
