@@ -10,3 +10,13 @@ It’s the amount that the estimate of the target function will change given dif
 A high-variance model is too complex and overfits the data, meaning it captures too much noise along with the underlying pattern and therefore performs poorly on unseen data.
 
 The key is to find a good balance between bias and variance, known as the bias-variance tradeoff, to create a model that generalizes well to new, unseen data.
+
+More on variance below:
+
+If our model has high variance, it means that it’s highly sensitive to the specific houses in our training set.
+So, for example, if we were to train our model on a slightly different set of houses in Austin, we might get very different predictions.
+This is because a high-variance model tends to overfit to the training data—it captures not just the general trend, but also the random noise in the training data.
+
+To illustrate this with an example, let’s say our training data includes a house that’s very expensive because it’s owned by a celebrity.
+A high-variance model might learn from this example that all houses in that particular neighborhood are extremely expensive, even though the high price was really due to the celebrity owner, which is more of an exception rather than the rule.
+If we then use this model to predict prices for houses in that neighborhood, it might predict higher prices than what they actually are.
