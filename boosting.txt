@@ -6,3 +6,12 @@ It creates trees based on errors from the previous trees. Continues to make tree
 The initial pseudo residuals are calculated based on (observed - expected). Then the first tree is built to predict the residuals using the specified features. With regression, the residuals of observations that end up in the same bucket are aggregated through the average. Then the original leaf is combined with the new tree and its residuals to come up with a new prediction for the target variable.
 Gradient boosting deals with high variance or overfitting by including a learning rate in the calculations. Thus, the learning rate is multiplied by the newly predicted residual then added to the average of the target.
 Taking lots of small steps in the right direction generates better results in the testing set and thus lower variance. The same process is then repeated and new predicted target variable is calculated using the learning rate multiplied by all previous trees plus the initial average of the target variable.
+
+
+When is gradient boosting used?
+
+1) Large number of observations: XGBoost performs well when you have a large number of observations in your training data1.
+2) Fewer features than observations: It’s effective when the number of features is less than the number of observations in your training data1.
+3) Mixed data types: XGBoost can handle a mix of numerical and categorical features, or just numerical features1.
+4) Imbalanced Classification: XGBoost is effective for a wide range of regression and classification predictive modeling problems, including imbalanced classification4.
+5) Kaggle Competitions and Other Applications: XGBoost has been used successfully in Kaggle competitions, recommendation systems, click-through rate prediction, among others5.
