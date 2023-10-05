@@ -1,3 +1,8 @@
 Ada-boost (when used in regression) starts off with creating a small tree or stump. The final say this tree has on the final output is based on how well it compensated for the previous errors.
 Then ada-boost builds another stump based on the errors from the previous stump. And it continues to make stumps until it has made the number of trees specified in the hyperparameter or if it has perfect fit.
 
+Gradient boosting starts by making an initial leaf rather than a stump/tree. For regression the value of the first leaf is the average value of the target variable. Like Ada-boost it scales the trees.
+It creates trees based on errors from the previous trees. Continues to make trees until it makes the number of trees specified in the hyperparameter or it fails to improve on the fit.
+The initial pseudo residuals are calculated based on (observed - expected). Then the first tree is built to predict the residuals using the specified features. With regression, the residuals of observations that end up in the same bucket are aggregated through the average. Then the original leaf is combined with the new tree and its residuals to come up with a new prediction for the target variable.
+Gradient boosting deals with high variance or overfitting by including a learning rate in the calculations. Thus, the learning rate is multiplied by the newly predicted residual then added to the average of the target.
+Taking lots of small steps in the right direction generates better results in the testing set and thus lower variance. The same process is then repeated and new predicted target variable is calculated using the learning rate multiplied by all previous trees plus the initial average of the target variable.
