@@ -1,0 +1,17 @@
+n_estimators: The number of boosting rounds or trees to train. It controls the complexity of the ensemble. A larger value may lead to a more complex model, but be cautious about overfitting.
+
+learning_rate: The step size shrinkage used to prevent overfitting. A smaller value makes the model more robust but requires more boosting rounds.
+
+max_depth: The maximum depth of each tree in the ensemble. It controls the complexity of individual trees. A larger value allows for more complex trees.
+
+min_child_weight: The minimum sum of instance weight (hessian) needed in a child. It's used to control overfitting. A larger value makes the algorithm more conservative.
+
+subsample: The fraction of samples used for training each tree. It introduces randomness and helps prevent overfitting. A value less than 1.0 can be used to perform subsampling.
+
+colsample_bytree: The fraction of features (columns) used for training each tree. It introduces randomness and helps prevent overfitting. A value less than 1.0 can be used to perform feature subsampling.
+
+gamma: A regularization term that controls the complexity of the tree. It encourages pruning of the tree by penalizing the number of splits in the tree.
+
+reg_alpha: L1 regularization term on weights. It adds a penalty on the magnitude of feature weights, which can encourage sparsity in the model.
+
+reg_lambda: L2 regularization term on weights. It adds a penalty on the square of feature weights, which can help control model complexity and prevent overfitting.
