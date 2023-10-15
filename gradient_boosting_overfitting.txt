@@ -1,0 +1,13 @@
+Large Discrepancy Between Training and Test Error: One of the most reliable signs of overfitting is a significant difference between the model's performance on the training data and the test data. If your model's performance metrics are excellent on the training data but significantly worse on the test data (e.g., high MAE and MSE on the test set), it suggests overfitting.
+
+Complex Model: Overfitting often occurs when your model is too complex. If you have a large number of boosting rounds, deep trees, or many features, the model can overfit the training data.
+
+Small Dataset: Overfitting is more likely to occur when your dataset is small. The model might memorize the training data rather than generalize from it.
+
+High Feature Importance on Irrelevant Features: If the model assigns high importance to features that are not relevant to the problem, it may be overfitting. Feature importance analysis can help detect this.
+
+Residual Analysis: Examine residual plots to identify patterns in the residuals. If the residuals exhibit a clear structure, it might indicate overfitting.
+
+Regularization: If you haven't applied any form of regularization (e.g., adjusting gamma, alpha, lambda), your model might be prone to overfitting. Proper regularization can help control this issue.
+
+Cross-Validation: Implement cross-validation during hyperparameter tuning and model evaluation. If your model consistently performs poorly on validation sets, it might be overfitting.
