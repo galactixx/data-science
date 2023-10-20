@@ -1,0 +1,15 @@
+Bagging and boosting are both ensemble methods in machine learning, but they differ in how they combine multiple models (base learners) to improve overall predictive performance. Two popular algorithms that represent these methods are Random Forest (a bagging algorithm) and Gradient Boosting (a boosting algorithm). Here are the key differences between bagging and boosting methods:
+
+Bagging (Random Forest):
+
+Parallel Training: In bagging methods like Random Forest, base learners are trained in parallel. Each base learner is trained independently on a random subset of the training data, and the final prediction is obtained by aggregating the predictions of all base learners.
+Sampling with Replacement: Bagging uses a technique called bootstrap sampling, where each base learner is trained on a random subset of the training data, selected with replacement. This means that the same data point can appear multiple times in the training set for a base learner.
+Reduced Variance: Bagging is effective at reducing the variance of the model. By averaging or majority voting the predictions of multiple models, it helps to smooth out individual model errors and create a more stable and accurate ensemble model.
+Random Feature Selection: In Random Forest, a random subset of features is considered for splitting at each node of the decision trees. This further decorrelates the base learners and increases diversity.
+Boosting (Gradient Boosting):
+
+Sequential Training: In boosting methods like Gradient Boosting, base learners are trained sequentially. Each new base learner focuses on correcting the errors made by the previous base learners. This sequential training process allows boosting to give more weight to challenging or misclassified data points.
+Weighted Data: Boosting assigns weights to training examples. Data points that are misclassified by previous models receive higher weights, making them more important in subsequent training rounds. This adaptive re-weighting process focuses on the most difficult-to-predict instances.
+Reduced Bias: Boosting is effective at reducing bias in the model. By giving more attention to hard-to-predict examples, it enhances the model's ability to fit complex patterns in the data.
+Learning Rate: Boosting algorithms typically introduce a learning rate parameter, which controls the contribution of each base learner to the final prediction. Lower learning rates can improve convergence and generalization.
+In summary, bagging methods like Random Forest aim to reduce variance and increase model stability by averaging or voting over multiple independently trained base models. In contrast, boosting methods like Gradient Boosting focus on reducing bias and increasing accuracy by sequentially training base models that address the weaknesses of their predecessors.
